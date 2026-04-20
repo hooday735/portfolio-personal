@@ -71,13 +71,7 @@ if (contactForm) {
     });
 }
 
-// Mouse Follower Effect (Subtle)
+// Mouse Follower Effect (Removed as photo is gone)
 document.addEventListener('mousemove', (e) => {
-    const x = (e.clientX / window.innerWidth - 0.5) * 20;
-    const y = (e.clientY / window.innerHeight - 0.5) * 20;
-    
-    const heroVisual = document.querySelector('.hero-visual img');
-    if (heroVisual) {
-        heroVisual.style.transform = `translate(${x}px, ${y}px)`;
-    }
+    // Keep space for other interactive effects if needed later
 });
