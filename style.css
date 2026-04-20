@@ -177,15 +177,21 @@ section {
 }
 
 .hero-layout {
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 5rem;
+    justify-content: center;
+    text-align: center;
     position: relative;
     z-index: 5;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-label {
@@ -205,26 +211,17 @@ section {
 .hero p {
     font-size: 1.2rem;
     color: var(--text-dim);
-    max-width: 600px;
+    max-width: 700px;
     margin-bottom: 3rem;
 }
 
-/* Profile Visual - Now on the left */
-.hero-visual {
-    flex-shrink: 0;
-    width: 450px;
-    height: 550px;
+.hero-btns {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
-.hero-visual img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 100px rgba(0, 242, 255, 0.15);
-    transition: transform 0.5s var(--ease-out);
-}
+/* Profile visual removed */
 
 
 /* Bento Grid */
@@ -347,16 +344,14 @@ input:focus, textarea:focus {
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .hero-visual { width: 350px; height: 450px; }
-    .hero-layout { gap: 3rem; }
+    .hero-layout { gap: 2rem; }
     .bento-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .hero h1 { font-size: 3.5rem; }
-    .hero-layout { flex-direction: column; text-align: center; }
-    .hero-visual { width: 300px; height: 350px; }
+    .hero-layout { text-align: center; }
     .contact-grid { grid-template-columns: 1fr; }
     .bento-grid { grid-template-columns: 1fr; }
     .item-large, .item-medium { grid-column: span 1; grid-row: span 1; }
