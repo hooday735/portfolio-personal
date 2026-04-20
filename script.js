@@ -81,27 +81,3 @@ document.addEventListener('mousemove', (e) => {
         heroVisual.style.transform = `translate(${x}px, ${y}px)`;
     }
 });
-
-// Image Upload Preview Logic
-const setupImagePreview = (inputId, displayId) => {
-    const input = document.getElementById(inputId);
-    const display = document.getElementById(displayId);
-    
-    if (input && display) {
-        input.addEventListener('change', function() {
-            const file = this.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    display.src = e.target.result;
-                }
-                reader.readAsDataURL(file);
-            }
-        });
-    }
-};
-
-// Initialize Previews
-setupImagePreview('profile-upload', 'profile-display');
-setupImagePreview('c-upload', 'c-display');
-setupImagePreview('python-upload', 'python-display');
